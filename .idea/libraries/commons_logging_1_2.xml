@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="commons-logging-1.2">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Desktop/commons-logging-1.2-src/src/main/java" />
+      <root url="file://$USER_HOME$/Desktop/commons-logging-1.2-src/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
