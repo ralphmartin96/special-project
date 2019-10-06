@@ -1,31 +1,54 @@
 package com.ics;
 
-public class OriginalSP {
-    private String title;
-    private String [] authors;
-    private String abstractText;
+import java.util.ArrayList;
 
-    protected String getTitle(){
+class OriginalSP {
+    private String title;
+    private ArrayList<String> authors;
+    private String adviser;
+    private String abstractText;
+    private ArrayList<String> indexTerms;
+
+    OriginalSP(String title, ArrayList<String> authors, String abstractText, ArrayList<String> indexTerms){
+        this.title = title;
+        this.authors = authors;
+        this.abstractText = abstractText;
+        this.indexTerms = indexTerms;
+    }
+
+    String getTitle(){
         return this.title;
     }
 
-    protected String [] getAuthors(){
+    ArrayList<String> getAuthors(){
         return this.authors;
     }
 
-    protected String getAbstractText(){
+    String getAdviser(){
+        return authors.get(authors.size()-1);
+    }
+
+    String getAbstractText(){
         return this.abstractText;
     }
 
-    protected void setTitle(String title){
+    ArrayList<String> getIndexTerms(){
+        return this.indexTerms;
+    }
+
+    private void setTitle(String title){
         this.title = title;
     }
 
-    protected void setAuthors(String [] authors){
+    private void setAuthors(ArrayList<String> authors){
         this.authors = authors;
     }
 
-    protected void setAbstractText(String abstractText){
+    private void setAbstractText(String abstractText){
         this.abstractText = abstractText;
+    }
+
+    private void setIndexTerms(ArrayList<String> indexTerms){
+        this.indexTerms = indexTerms;
     }
 }
