@@ -30,7 +30,6 @@ public class SPParser {
         String abstractText;
         ArrayList<String> indexTerms;
         ArrayList<String> authors;
-        String adviser;
 
         OriginalSP sp;
 

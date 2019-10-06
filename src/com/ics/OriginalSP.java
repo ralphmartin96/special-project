@@ -5,7 +5,6 @@ import java.util.ArrayList;
 class OriginalSP {
     private String title;
     private ArrayList<String> authors;
-    private String adviser;
     private String abstractText;
     private ArrayList<String> indexTerms;
 
