@@ -14,8 +14,9 @@ import java.util.regex.Pattern;
 
 public class SPParser {
 
-    private static String allText;
+    private static String allText=null;
     private static String filepath="";
+    private static String filetype="";
 
     private static int startRowIndex;
     private static int endRowIndex;
@@ -23,22 +24,26 @@ public class SPParser {
     private static int endColIndex;
 
     private static OriginalSP parse(){
-        allText = getAllTextFromPDF(filepath);
-        PdfUtil.print(allText);
 
         String title;
         String abstractText;
         ArrayList<String> indexTerms;
         ArrayList<String> authors;
 
-        OriginalSP sp;
+        getTextFromFile();
 
-        title = parserTitle();
-        authors = parserAuthors();
-        abstractText = parserAbstract();
-        indexTerms = parserIndexTerms();
+        OriginalSP sp = null;
 
-        sp = new OriginalSP(title, authors, abstractText, indexTerms);
+        if(allText != null) {
+
+            title = parserTitle();
+            authors = parserAuthors();
+            abstractText = parserAbstract();
+            indexTerms = parserIndexTerms();
+
+            sp = new OriginalSP(title, authors, abstractText, indexTerms);
+
+        }
 
         return sp;
     }
@@ -156,10 +161,29 @@ public class SPParser {
         System.out.println("==========================================\n");
     }
 
+    private static void getTextFromFile(){
+        System.out.println("TYPE: "+filetype);
+
+        switch (filetype) {
+            case "PDF":
+                allText = getAllTextFromPDF(filepath);
+                PdfUtil.print(allText);
+                break;
+            case "TEX":
+                System.out.println("IEEE file found.");
+                break;
+            case "JPG":
+            case "JPEG":
+            case "PNG":
+                System.out.println("Image file found.");
+                break;
+        }
+    }
+
     private static String chooseFile(){
         String path="";
 
-        File initialDirectory = new File("C:\\Users\\samsung\\IdeaProjects\\special-project\\ieee");
+        File initialDirectory = new File("C:\\Users\\samsung\\IdeaProjects\\special-project\\input");
 
         JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
         jfc.setCurrentDirectory(initialDirectory);
@@ -212,10 +236,19 @@ public class SPParser {
 
     public static void main(String[] args) {
 
+        int path_length;
+
         while(filepath.equals("")) {
             filepath = chooseFile();
             if(filepath.equals("")) System.err.println("Err: input file path");
         }
+
+        path_length = filepath.length();
+
+        filetype = filepath.substring(path_length-5, path_length)
+                    .replaceAll(".*?\\.", "")
+                    .toUpperCase()
+                    .trim();
 
         OriginalSP sp = parse();
         test(sp);
