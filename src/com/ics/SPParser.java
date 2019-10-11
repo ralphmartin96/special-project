@@ -3,6 +3,10 @@ package com.ics;
 import com.ics.utils.PdfUtil;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
+import org.opencv.core.Core;
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
+import org.opencv.core.Scalar;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
@@ -23,6 +27,8 @@ public class SPParser {
     private static int startColIndex;
     private static int endColIndex;
 
+    static {System.loadLibrary(Core.NATIVE_LIBRARY_NAME);}
+
     private static OriginalSP parse(){
 
         String title;
@@ -30,9 +36,9 @@ public class SPParser {
         ArrayList<String> indexTerms;
         ArrayList<String> authors;
 
-        getTextFromFile();
-
         OriginalSP sp = null;
+
+        getTextFromFile();
 
         if(allText != null) {
 
@@ -177,6 +183,9 @@ public class SPParser {
             case "PNG":
                 System.out.println("Image file found.");
                 break;
+            default:
+                System.out.println("Invalid file!");
+                break;
         }
     }
 
@@ -234,6 +243,17 @@ public class SPParser {
         return "";
     }
 
+    private static void test2(){
+        System.out.println("Welcome to OpenCV " + Core.VERSION);
+        Mat m = new Mat(5, 10, CvType.CV_8UC1, new Scalar(0));
+        System.out.println("OpenCV Mat: " + m);
+        Mat mr1 = m.row(1);
+        mr1.setTo(new Scalar(1));
+        Mat mc5 = m.col(5);
+        mc5.setTo(new Scalar(5));
+        System.out.println("OpenCV Mat data:\n" + m.dump());
+    }
+
     public static void main(String[] args) {
 
         int path_length;
@@ -252,5 +272,7 @@ public class SPParser {
 
         OriginalSP sp = parse();
         test(sp);
+
+//        test2();
     }
 }

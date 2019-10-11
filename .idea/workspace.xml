@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6de40529-25e1-4cfa-8b4e-a6627e2cf3fb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/special-project/com/ics/OriginalSP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/special-project/com/ics/OriginalSP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/special-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/special-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ics/SPParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ics/SPParser.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,8 +19,8 @@
       <file leaf-file-name="SPParser.java" pinned="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ics/SPParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="240" lean-forward="true" selection-start-line="240" selection-end-line="240" />
+            <state relative-caret-position="188">
+              <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#parserTitle#0;class#SPParser#0" />
@@ -116,9 +116,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-2" />
-    <option name="width" value="1259" />
+    <option name="width" value="1302" />
     <option name="height" value="728" />
   </component>
   <component name="ProjectView">
@@ -126,8 +126,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,13 +148,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="project s&#9;ACTION&#9;ShowProjectStructureSettings&#10;plugins&#9;PSI&#9;JAVA://com.sun.deploy.config.PluginServerConfig" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OpenCV/opencv/build/java/x86" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
@@ -242,11 +242,19 @@
       <option name="project" value="LOCAL" />
       <updated>1570376665591</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added file type sorter">
+      <created>1570706278121</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570706278121</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-2" y="0" width="1259" height="728" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="8" />
@@ -257,11 +265,11 @@
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.41215226" />
+      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.4119067" />
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.109077595" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11987128" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -281,12 +289,12 @@
       <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.5651537" />
       <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="5" weight="0.24963397" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="1" show_stripe_button="false" />
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
@@ -296,7 +304,7 @@
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="1" show_stripe_button="false" />
       <window_info id="Capture Tool" order="3" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="right" id="Messages" order="8" weight="0.45387995" />
@@ -310,7 +318,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated version 2019" />
     <MESSAGE value="Removed adviser variables in project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed adviser variables in project" />
+    <MESSAGE value="Added file type sorter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added file type sorter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -318,6 +327,124 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/ics/SPParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4369">
+          <caret line="257" column="5" selection-start-line="257" selection-start-column="5" selection-end-line="257" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
+            <element signature="method#parserAbstract#0;class#SPParser#0" />
+            <element signature="method#parserIndexTerms#0;class#SPParser#0" />
+            <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
+            <element signature="method#test#0;class#SPParser#0" />
+            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ics/OriginalSP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding>
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ics/utils/PdfUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#findRowIndexFrom#0;class#PdfUtil#0" />
+            <element signature="method#countNumber#0;class#PdfUtil#0" />
+            <element signature="method#getAreaValue#0;class#PdfUtil#0" />
+            <element signature="method#getAreaValue#1;class#PdfUtil#0" />
+            <element signature="method#getAreaValueSmart#0;class#PdfUtil#0" />
+            <element signature="method#getAreaValueSmart#1;class#PdfUtil#0" />
+            <element signature="method#getEndPosSmart#0;class#PdfUtil#0" />
+            <element signature="method#cutNumberChar#0;class#PdfUtil#0" />
+            <element signature="method#cutNonNumberChar#0;class#PdfUtil#0" />
+            <element signature="method#cutContent#0;class#PdfUtil#0" />
+            <element signature="method#pureAscii#0;class#PdfUtil#0" />
+            <element signature="method#findColIndex#0;class#PdfUtil#0" />
+            <element signature="method#autoChangeLine#0;class#PdfUtil#0" />
+            <element signature="method#cutUselessInformations#0;class#PdfUtil#0" />
+            <element signature="method#cutUselessInformationsFrom#0;class#PdfUtil#0" />
+            <element signature="method#PatternVU#0;class#PdfUtil#0" />
+            <element signature="method#getMessageWhenBlankRowFound#0;class#PdfUtil#0" />
+            <element signature="method#findRowIndexByMessageLastRow#0;class#PdfUtil#0" />
+            <element signature="method#findRowIndexByMessageLastRowFrom#0;class#PdfUtil#0" />
+            <element signature="method#getAreaValueWithoutTargetStr#0;class#PdfUtil#0" />
+            <element signature="method#cutColon#0;class#PdfUtil#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ics/SPParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4369">
+          <caret line="257" column="5" lean-forward="true" selection-start-line="257" selection-start-column="5" selection-end-line="257" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
+            <element signature="method#parserAbstract#0;class#SPParser#0" />
+            <element signature="method#parserIndexTerms#0;class#SPParser#0" />
+            <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
+            <element signature="method#test#0;class#SPParser#0" />
+            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ics/OriginalSP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding>
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ics/utils/PdfUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#findRowIndexFrom#0;class#PdfUtil#0" />
+            <element signature="method#countNumber#0;class#PdfUtil#0" />
+            <element signature="method#getAreaValue#0;class#PdfUtil#0" />
+            <element signature="method#getAreaValue#1;class#PdfUtil#0" />
+            <element signature="method#getAreaValueSmart#0;class#PdfUtil#0" />
+            <element signature="method#getAreaValueSmart#1;class#PdfUtil#0" />
+            <element signature="method#getEndPosSmart#0;class#PdfUtil#0" />
+            <element signature="method#cutNumberChar#0;class#PdfUtil#0" />
+            <element signature="method#cutNonNumberChar#0;class#PdfUtil#0" />
+            <element signature="method#cutContent#0;class#PdfUtil#0" />
+            <element signature="method#pureAscii#0;class#PdfUtil#0" />
+            <element signature="method#findColIndex#0;class#PdfUtil#0" />
+            <element signature="method#autoChangeLine#0;class#PdfUtil#0" />
+            <element signature="method#cutUselessInformations#0;class#PdfUtil#0" />
+            <element signature="method#cutUselessInformationsFrom#0;class#PdfUtil#0" />
+            <element signature="method#PatternVU#0;class#PdfUtil#0" />
+            <element signature="method#getMessageWhenBlankRowFound#0;class#PdfUtil#0" />
+            <element signature="method#findRowIndexByMessageLastRow#0;class#PdfUtil#0" />
+            <element signature="method#findRowIndexByMessageLastRowFrom#0;class#PdfUtil#0" />
+            <element signature="method#getAreaValueWithoutTargetStr#0;class#PdfUtil#0" />
+            <element signature="method#cutColon#0;class#PdfUtil#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ics/SPParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3621">
@@ -836,13 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_111/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="356" selection-start-line="356" selection-end-line="356" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://G:/Pepe/PdfUtil.java" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -908,10 +1028,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_111/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="1866" selection-start-line="1866" selection-end-line="1866" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ics/SPParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="240" lean-forward="true" selection-start-line="240" selection-end-line="240" />
+        <state relative-caret-position="188">
+          <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
@@ -942,7 +1069,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
