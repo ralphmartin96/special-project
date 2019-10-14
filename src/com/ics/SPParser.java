@@ -1,20 +1,27 @@
 package com.ics;
 
 import com.ics.utils.PdfUtil;
+
+//import net.sourceforge.tess4j.ITesseract;
+//import net.sourceforge.tess4j.Tesseract;
+//import net.sourceforge.tess4j.Tesseract1;
+//import net.sourceforge.tess4j.TesseractException;
+
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
+
 import org.opencv.core.Core;
-import org.opencv.core.CvType;
-import org.opencv.core.Mat;
-import org.opencv.core.Scalar;
+//import org.opencv.core.CvType;
+//import org.opencv.core.Mat;
+//import org.opencv.core.Scalar;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+//import java.util.regex.Matcher;
+//import java.util.regex.Pattern;
 
 public class SPParser {
 
@@ -26,6 +33,8 @@ public class SPParser {
     private static int endRowIndex;
     private static int startColIndex;
     private static int endColIndex;
+
+    private static DatabaseHelper db;
 
     static {System.loadLibrary(Core.NATIVE_LIBRARY_NAME);}
 
@@ -153,11 +162,14 @@ public class SPParser {
     }
 
     private static void test(OriginalSP sp){
+        StringBuilder authors= new StringBuilder();
         System.out.println("==========================================\n");
         System.out.println("Title:\n" + sp.getTitle()+"\n");
         System.out.println("Authors:\n");
-        for(String author : sp.getAuthors())
+        for(String author : sp.getAuthors()) {
             System.out.println(author);
+            authors.append(author).append(";");
+        }
         System.out.println("\n");
         System.out.println("Adviser: \n" + sp.getAdviser()+"\n");
         System.out.println("Abstract: \n" + sp.getAbstractText()+"\n");
@@ -165,6 +177,9 @@ public class SPParser {
         for(String indexTerm : sp.getIndexTerms())
             System.out.println(indexTerm);
         System.out.println("==========================================\n");
+
+        db.insertIntoProjects(sp.getTitle(), authors.toString(), sp.getAbstractText());
+        db.getDataFromProjects();
     }
 
     private static void getTextFromFile(){
@@ -209,52 +224,68 @@ public class SPParser {
         return path;
     }
 
-    private static void selectMultipleFiles(){
-        JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
-        jfc.setDialogTitle("Multiple file and directory selection:");
-        jfc.setMultiSelectionEnabled(true);
-        jfc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-
-        int returnValue = jfc.showOpenDialog(null);
-        if (returnValue == JFileChooser.APPROVE_OPTION) {
-            File[] files = jfc.getSelectedFiles();
-            System.out.println("Directories found\n");
-            Arrays.asList(files).forEach(x -> {
-                if (x.isDirectory()) {
-                    System.out.println(x.getName());
-                }
-            });
-            System.out.println("\n- - - - - - - - - - -\n");
-            System.out.println("Files Found\n");
-            Arrays.asList(files).forEach(x -> {
-                if (x.isFile()) {
-                    System.out.println(x.getName());
-                }
-            });
-        }
-    }
-
-    private static String findMatch(String pattern, String input) {
-        Pattern p = Pattern.compile(pattern);
-        Matcher m = p.matcher(input);
-        if (m.find()) {
-            return m.group();
-        }
-        return "";
-    }
-
-    private static void test2(){
-        System.out.println("Welcome to OpenCV " + Core.VERSION);
-        Mat m = new Mat(5, 10, CvType.CV_8UC1, new Scalar(0));
-        System.out.println("OpenCV Mat: " + m);
-        Mat mr1 = m.row(1);
-        mr1.setTo(new Scalar(1));
-        Mat mc5 = m.col(5);
-        mc5.setTo(new Scalar(5));
-        System.out.println("OpenCV Mat data:\n" + m.dump());
-    }
+//UNCOMMENT HIDDEN FUNCTIONS
+//    private static void selectMultipleFiles(){
+//        JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+//        jfc.setDialogTitle("Multiple file and directory selection:");
+//        jfc.setMultiSelectionEnabled(true);
+//        jfc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+//
+//        int returnValue = jfc.showOpenDialog(null);
+//        if (returnValue == JFileChooser.APPROVE_OPTION) {
+//            File[] files = jfc.getSelectedFiles();
+//            System.out.println("Directories found\n");
+//            Arrays.asList(files).forEach(x -> {
+//                if (x.isDirectory()) {
+//                    System.out.println(x.getName());
+//                }
+//            });
+//            System.out.println("\n- - - - - - - - - - -\n");
+//            System.out.println("Files Found\n");
+//            Arrays.asList(files).forEach(x -> {
+//                if (x.isFile()) {
+//                    System.out.println(x.getName());
+//                }
+//            });
+//        }
+//    }
+//
+//    private static String findMatch(String pattern, String input) {
+//        Pattern p = Pattern.compile(pattern);
+//        Matcher m = p.matcher(input);
+//        if (m.find()) {
+//            return m.group();
+//        }
+//        return "";
+//    }
+//
+//    private static void testOpenCV(){
+//        System.out.println("Welcome to OpenCV " + Core.VERSION);
+//        Mat m = new Mat(5, 10, CvType.CV_8UC1, new Scalar(0));
+//        System.out.println("OpenCV Mat: " + m);
+//        Mat mr1 = m.row(1);
+//        mr1.setTo(new Scalar(1));
+//        Mat mc5 = m.col(5);
+//        mc5.setTo(new Scalar(5));
+//        System.out.println("OpenCV Mat data:\n" + m.dump());
+//    }
+//
+//    private static void testTesseract(){
+//        File imageFile = new File(filepath);
+//        ITesseract instance = new Tesseract();  // JNA Interface Mapping
+////         ITesseract instance = new Tesseract1(); // JNA Direct Mapping
+//
+//        try {
+//            String result = instance.doOCR(imageFile);
+//            System.out.println(result);
+//        } catch (TesseractException e) {
+//            System.err.println(e.getMessage());
+//        }
+//    }
 
     public static void main(String[] args) {
+
+        db = new DatabaseHelper();
 
         int path_length;
 
@@ -271,8 +302,12 @@ public class SPParser {
                     .trim();
 
         OriginalSP sp = parse();
+
         test(sp);
 
-//        test2();
+        db.deleteTableProjects();
+//
+//        testOpenCV();
+//        testTesseract();
     }
 }
