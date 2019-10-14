@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6de40529-25e1-4cfa-8b4e-a6627e2cf3fb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/ics/DatabaseHelper.java" afterDir="false" />
+    <list default="true" id="6de40529-25e1-4cfa-8b4e-a6627e2cf3fb" name="Default" comment="Created ta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/special-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/special-project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ics/DatabaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ics/DatabaseHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ics/SPParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ics/SPParser.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,20 +19,18 @@
       <file leaf-file-name="SPParser.java" pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ics/SPParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="91" column="36" lean-forward="true" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+            <state relative-caret-position="257">
+              <caret line="290" lean-forward="true" selection-start-line="290" selection-end-line="290" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#parserTitle#0;class#SPParser#0" />
+                <element signature="method#parserAuthors#0;class#SPParser#0" />
                 <element signature="method#parserAbstract#0;class#SPParser#0" />
                 <element signature="method#parserIndexTerms#0;class#SPParser#0" />
                 <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
                 <element signature="method#getTextFromFile#0;class#SPParser#0" />
                 <element signature="method#chooseFile#0;class#SPParser#0" />
-                <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-                <element signature="method#findMatch#0;class#SPParser#0" />
-                <element signature="method#testOpenCV#0;class#SPParser#0" />
-                <element signature="method#testTesseract#0;class#SPParser#0" />
+                <element signature="e#6984#7032#0" />
               </folding>
             </state>
           </provider>
@@ -42,8 +39,8 @@
       <file leaf-file-name="DatabaseHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ics/DatabaseHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="278">
+              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
               <folding>
                 <element signature="e#296#297#0" expanded="true" />
                 <element signature="e#324#325#0" expanded="true" />
@@ -51,7 +48,6 @@
                 <element signature="method#createTableProjects#0;class#DatabaseHelper#0" />
                 <element signature="method#insertIntoProjects#0;class#DatabaseHelper#0" />
                 <element signature="method#getDataFromProjects#0;class#DatabaseHelper#0" />
-                <element signature="method#deleteTableProjects#0;class#DatabaseHelper#0" />
               </folding>
             </state>
           </provider>
@@ -134,8 +130,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/ics/Main.java" />
         <option value="$PROJECT_DIR$/src/com/ics/OriginalSP.java" />
-        <option value="$PROJECT_DIR$/src/com/ics/SPParser.java" />
         <option value="$PROJECT_DIR$/src/com/ics/DatabaseHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/ics/SPParser.java" />
       </list>
     </option>
   </component>
@@ -286,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570814222440</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added DatabaseHelper to project">
+      <created>1571042978634</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571042978634</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -325,10 +328,10 @@
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.409224" />
+      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.4714495" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984127" visible="true" weight="0.109077595" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984127" weight="0.109077595" />
       <window_info id="Structure" order="1" sideWeight="0.50158733" side_tool="true" weight="0.109077595" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="bottom" id="TODO" order="8" />
@@ -357,7 +360,8 @@
     <MESSAGE value="Removed adviser variables in project" />
     <MESSAGE value="Added file type sorter" />
     <MESSAGE value="Added OpenCV java Native Library" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added OpenCV java Native Library" />
+    <MESSAGE value="Added DatabaseHelper to project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added DatabaseHelper to project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -372,15 +376,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -396,7 +398,6 @@
             <element signature="method#createTableProjects#0;class#DatabaseHelper#0" />
             <element signature="method#insertIntoProjects#0;class#DatabaseHelper#0" />
             <element signature="method#getDataFromProjects#0;class#DatabaseHelper#0" />
-            <element signature="method#deleteTableProjects#0;class#DatabaseHelper#0" />
           </folding>
         </state>
       </provider>
@@ -450,15 +451,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -512,15 +511,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -574,15 +571,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -636,15 +631,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -698,15 +691,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -760,15 +751,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -811,15 +800,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -873,15 +860,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -931,15 +916,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -989,15 +972,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -1047,15 +1028,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -1105,15 +1084,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -1156,15 +1133,13 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
@@ -1251,28 +1226,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ics/SPParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="91" column="36" lean-forward="true" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+        <state relative-caret-position="257">
+          <caret line="290" lean-forward="true" selection-start-line="290" selection-end-line="290" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#parserTitle#0;class#SPParser#0" />
+            <element signature="method#parserAuthors#0;class#SPParser#0" />
             <element signature="method#parserAbstract#0;class#SPParser#0" />
             <element signature="method#parserIndexTerms#0;class#SPParser#0" />
             <element signature="method#getAllTextFromPDF#0;class#SPParser#0" />
             <element signature="method#getTextFromFile#0;class#SPParser#0" />
             <element signature="method#chooseFile#0;class#SPParser#0" />
-            <element signature="method#selectMultipleFiles#0;class#SPParser#0" />
-            <element signature="method#findMatch#0;class#SPParser#0" />
-            <element signature="method#testOpenCV#0;class#SPParser#0" />
-            <element signature="method#testTesseract#0;class#SPParser#0" />
+            <element signature="e#6984#7032#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ics/DatabaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="278">
+          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
             <element signature="e#324#325#0" expanded="true" />
@@ -1280,7 +1253,6 @@
             <element signature="method#createTableProjects#0;class#DatabaseHelper#0" />
             <element signature="method#insertIntoProjects#0;class#DatabaseHelper#0" />
             <element signature="method#getDataFromProjects#0;class#DatabaseHelper#0" />
-            <element signature="method#deleteTableProjects#0;class#DatabaseHelper#0" />
           </folding>
         </state>
       </provider>

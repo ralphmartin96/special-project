@@ -68,14 +68,27 @@ class DatabaseHelper {
         }
     }
 
-    void insertIntoProjects(String title, String authors, String abstract_text) {
-        String sql = "INSERT INTO " +TABLE_PROJECTS+" (title,authors,abstract) VALUES(?,?,?)";
+    void insertIntoProjects(OriginalSP sp) {
+        String sql = "INSERT INTO " +TABLE_PROJECTS+" (title,authors,abstract,adviser, index_terms) VALUES(?,?,?,?,?)";
+
+        StringBuilder authors = new StringBuilder();
+        StringBuilder index_terms = new StringBuilder();
+
+        for(String author : sp.getAuthors())
+            authors.append(author).append(";");
+
+        for(String indexTerms : sp.getIndexTerms())
+            index_terms.append(indexTerms).append(", ");
 
         try (Connection conn = this.connect();
-            PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, title);
-            pstmt.setString(2, authors);
-            pstmt.setString(3, abstract_text);
+
+        PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, sp.getTitle());
+            pstmt.setString(2, authors.toString());
+            pstmt.setString(3, sp.getAbstractText());
+            pstmt.setString(4, sp.getAdviser());
+            pstmt.setString(5, index_terms.toString());
+
             pstmt.executeUpdate();
 
             System.out.println("Successfully inserted into table "+TABLE_PROJECTS);
@@ -85,20 +98,32 @@ class DatabaseHelper {
         }
     }
 
-    void getDataFromProjects(){
-        String sql = "SELECT id, title, authors, abstract FROM "+TABLE_PROJECTS;
+    void getAllDataFromProjects(){
+        String sql = "SELECT id, title, authors, abstract, adviser, index_terms FROM "+TABLE_PROJECTS;
 
         try (Connection conn = this.connect();
              Statement stmt  = conn.createStatement();
              ResultSet rs    = stmt.executeQuery(sql)){
 
             while (rs.next()) {
-                System.out.println(
-                        rs.getInt("id") +  "\n" +
-                        rs.getString("title") + "\n" +
-                        rs.getString("authors") + "\n" +
-                        rs.getString("abstract")
-                );
+
+                System.out.println("Project ID:\n" + rs.getInt("id") +"\n");
+                System.out.println("==========================================\n");
+                System.out.println("Title:\n" + rs.getString("title") +"\n");
+                System.out.println("Authors:\n" + rs.getString("authors")+"\n");
+                System.out.println("Adviser: \n" +  rs.getString("adviser")+"\n");
+                System.out.println("Abstract: \n" + rs.getString("abstract")+"\n");
+                System.out.println("Index Terms: \n"+ rs.getString("index_terms")+"\n");
+                System.out.println("==========================================\n");
+
+//                System.out.println(
+//                        rs.getInt("id") +  "\n***\n" +
+//                        rs.getString("title") + "\n***\n" +
+//                        rs.getString("authors") + "\n***\n" +
+//                        rs.getString("abstract") +"\n***\n" +
+//                        rs.getString("adviser") +"\n***\n" +
+//                        rs.getString("index_terms") +"\n***\n"
+//                );
             }
 
         } catch (SQLException e) {

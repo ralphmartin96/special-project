@@ -58,6 +58,7 @@ public class SPParser {
 
             sp = new OriginalSP(title, authors, abstractText, indexTerms);
 
+            db.insertIntoProjects(sp);
         }
 
         return sp;
@@ -162,24 +163,23 @@ public class SPParser {
     }
 
     private static void test(OriginalSP sp){
-        StringBuilder authors= new StringBuilder();
-        System.out.println("==========================================\n");
-        System.out.println("Title:\n" + sp.getTitle()+"\n");
-        System.out.println("Authors:\n");
-        for(String author : sp.getAuthors()) {
-            System.out.println(author);
-            authors.append(author).append(";");
-        }
-        System.out.println("\n");
-        System.out.println("Adviser: \n" + sp.getAdviser()+"\n");
-        System.out.println("Abstract: \n" + sp.getAbstractText()+"\n");
-        System.out.println("Index Terms: \n");
-        for(String indexTerm : sp.getIndexTerms())
-            System.out.println(indexTerm);
-        System.out.println("==========================================\n");
+//        System.out.println("==========================================\n");
+//        System.out.println("Title:\n" + sp.getTitle()+"\n");
+//        System.out.println("Authors:\n");
+//        for(String author : sp.getAuthors())
+//            System.out.println(author);
+//        System.out.println("\n");
+//        System.out.println("Adviser: \n" + sp.getAdviser()+"\n");
+//        System.out.println("Abstract: \n" + sp.getAbstractText()+"\n");
+//        System.out.println("Index Terms: \n");
+//        for(String indexTerm : sp.getIndexTerms())
+//            System.out.println(indexTerm);
+//        System.out.println("==========================================\n");
 
-        db.insertIntoProjects(sp.getTitle(), authors.toString(), sp.getAbstractText());
-        db.getDataFromProjects();
+        db.getAllDataFromProjects();
+
+//        db.deleteTableProjects();
+
     }
 
     private static void getTextFromFile(){
@@ -188,7 +188,7 @@ public class SPParser {
         switch (filetype) {
             case "PDF":
                 allText = getAllTextFromPDF(filepath);
-                PdfUtil.print(allText);
+//                PdfUtil.print(allText);
                 break;
             case "TEX":
                 System.out.println("IEEE file found.");
@@ -306,6 +306,7 @@ public class SPParser {
         test(sp);
 
         db.deleteTableProjects();
+
 //
 //        testOpenCV();
 //        testTesseract();
